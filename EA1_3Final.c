@@ -1,4 +1,5 @@
-// modelo de 26.02.2014
+//Create by 0196611 Vinicius Daniel N. Barros
+// Exercicio da mega sena feito em Programação 1 (2016/02)
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -10,7 +11,7 @@
 #include <locale.h>
 #include <math.h>
 
-// rotina para podermos utilizar cor do texto (textcolor)
+// rotina para utilizar cor do texto (textcolor)
 // e cor do fundo (textbackground) em um único comando.
 // para chama-la de dentro do programa use  cores(x,y);
 // onde x = numero da cor do texto  (textcolor)
@@ -41,7 +42,7 @@ void imp_autor(){
   textcolor(10);
   printf("Vinicius Daniel");
   Sleep(1500);
-  system("cls"); // comando para limpar o conteúdo da tela.
+  system("cls");
   textcolor(15);
 }
 
@@ -53,12 +54,14 @@ main()
    float valor=0;
 
    srand(time(NULL));
-
+    //while da quantidade de numeros a serem jogados
    do{
         printf("Digite a quantidade de números a serem jogados em cada aposta: ");
         scanf("%d", &numero);
         if (numero < 6 || numero > 15){
             printf("\n\nQuantidade de numeros invalida!\n\n");
+            Sleep(2000);
+            system("cls");
         }
 
    }while (numero < 6 || numero > 15);
